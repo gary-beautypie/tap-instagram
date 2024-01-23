@@ -478,7 +478,7 @@ class MediaInsightsStream(InstagramStream):
                 ]
                 if media_type == "VIDEO":
                     metrics.append("video_views")
-                    metrics.append("engagement")
+                    metrics.append("total_interactions")
                 else:
                     metrics.append("total_interactions")
                 return metrics
