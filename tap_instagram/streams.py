@@ -468,21 +468,23 @@ class MediaInsightsStream(InstagramStream):
                     "reach",
                     "saved",
                     "shares",
-                    "engagement",
+                    "total_interactions",
                 ]
             else:  # media_product_type is "AD" or "FEED"
                 metrics = [
-                    "engagement",
                     "impressions",
                     "reach",
                     "saved",
                 ]
                 if media_type == "VIDEO":
                     metrics.append("video_views")
+                    metrics.append("engagement")
+                else:
+                    metrics.append("total_interactions")
                 return metrics
         elif media_type == "CAROUSEL_ALBUM":
             return [
-                "engagement",
+                "total_interactions",
                 "impressions",
                 "reach",
                 "saved",
